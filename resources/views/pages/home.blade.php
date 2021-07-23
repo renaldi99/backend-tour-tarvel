@@ -1,72 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour Travel</title>
-    <link rel="stylesheet" href="./frontend/libraries/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./frontend/libraries/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="./frontend/libraries/aos/dist/aos.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./frontend/styles/main.css">
-</head>
-<body>
-    <!-- Start Navbar -->
-    <div class="container" id="nav"> 
-        <nav class="row navbar navbar-expand-lg navbar-light bg-white">
-            <a href="#" class="navbar-brand">
-                <img src="./frontend/images/Logo.png" alt="logo RAVEL"/>
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
-                <span class="navbar-toggler-icon"></span> 
-            </button>
+@extends('layouts.app')
 
-            <div class="collapse navbar-collapse" id="navb">
-                <ul class="navbar-nav ml-auto mr-3 text-center">
-                    <li class="nav-item mx-md-2">
-                        <a href="#home" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item mx-md-2">
-                        <a href="#popular" class="nav-link page-scroll">Tiket Tour</a>
-                    </li>
-                    <li class="nav-item dropdown mx-md-2">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Service</a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Create VISA</a>
-                            <a href="#" class="dropdown-item">Payment</a>
-                            <a href="#" class="dropdown-item">Other Problems</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mx-md-2">
-                        <a href="#testimonialHeading" class="nav-link page-scroll">Testimonial</a>
-                    </li>  
-                </ul>
+@section('title', 'Raya Tour Travel')
 
-                <!-- Mobile Button -->
-                <form class="form-inline d-sm-block d-md-none">
-                    <button class="btn btn-block btn-masuk my-2 my-sm-0 ">Masuk</button>
-                </form>
-                <form class="form-inline d-sm-block d-md-none">
-                    <button class="btn btn-block btn-daftar my-2 my-sm-0 ">Daftar</button>
-                </form>
-
-                <!-- Desktop Button -->
-                <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-2">
-                    <button class="btn btn-masuk my-2 my-sm-0 px-4">Masuk</button>
-                </form>
-                <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-2">
-                    <button class="btn btn-daftar my-2 my-sm-0 px-4">Daftar</button>
-                </form>
-
-            </div>
-        </nav>
-    </div>
-    <!-- End Navbar -->
-
+@section('content')
     <!-- Start Header -->
     <header class="text-center">
         <h1>
@@ -115,7 +51,7 @@
                                 <div class="tour-text">Mulai dari</div>
                                 <div class="tour-price">IDR 770,000</div>
                             </div>
-                            <a href="detail.html" class="stretched-link"></a>
+                            <a href="{{ route('detail') }}" class="stretched-link"></a>
                         </div>
                     </div>
                     <div class="col-sm-13 col-md-4" data-aos="zoom-in-up" data-aos-duration="1000">
@@ -129,7 +65,7 @@
                                 <div class="tour-text">Mulai dari</div>
                                 <div class="tour-price">IDR 350,000</div>
                             </div>
-                            <a href="detail.html" class="stretched-link"></a>
+                            <a href="{{ route('detail') }}" class="stretched-link"></a>
                         </div>
                     </div>
                     <div class="col-sm-13 col-md-4" data-aos="zoom-in-up" data-aos-duration="1500">
@@ -143,7 +79,7 @@
                                 <div class="tour-text">Mulai dari</div>
                                 <div class="tour-price">IDR 470,000</div>
                             </div>
-                            <a href="detail.html" class="stretched-link"></a>
+                            <a href="{{ route('detail') }}" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
@@ -154,16 +90,16 @@
             <div class="container">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-3 col-sm-12 text-center">
-                        <img src="./frontend/images/garuda1.png" alt="Image BCA">
+                        <img src="{{ url('frontend/images/garuda1.png') }}" alt="Image BCA">
                     </div>
                     <div class="col-md-3 col-sm-12 text-center">
-                        <img src="./frontend/images/bca.png" alt="Image BCA">
+                        <img src="{{ url('frontend/images/bca.png') }}" alt="Image BCA">
                     </div>
                     <div class="col-md-3 col-sm-12 text-center">
-                        <img src="./frontend/images/reddoorz.png" alt="Image BCA">
+                        <img src="{{ url('frontend/images/reddoorz.png') }}" alt="Image BCA">
                     </div>
                     <div class="col-md-3 col-sm-12 text-center">
-                        <img src="./frontend/images/disney1.png" alt="Image BCA">
+                        <img src="{{ url('frontend/images/disney1.png') }}" alt="Image BCA">
                     </div>
                 </div>
             </div>
@@ -196,7 +132,7 @@
                                         <div class="col-lg-8">
                                             <div class="single-testimonial text-center">
                                                 <div class="testimonial-image">
-                                                    <img src="./frontend/images/img-user.png" alt="Image User">
+                                                    <img src="{{ url('frontend/images/img-user.png') }}" alt="Image User">
                                                 </div>
                                                 <p>
                                                     "Liburan di bromo mantap, pesan tiket serta pembayarannya 
@@ -217,7 +153,7 @@
                                         <div class="col-lg-8">
                                             <div class="single-testimonial text-center">
                                                 <div class="testimonial-image">
-                                                    <img src="./frontend/images/img-testi-1.png" alt="Image User">
+                                                    <img src="{{ url('frontend/images/img-testi-1.png') }}" alt="Image User">
                                                 </div>
                                                 <p>
                                                     "Liburan di bromo mantap, pesan tiket serta pembayarannya 
@@ -238,7 +174,7 @@
                                         <div class="col-lg-8">
                                             <div class="single-testimonial text-center">
                                                 <div class="testimonial-image">
-                                                    <img src="./frontend/images/img-testi-2.png" alt="Image User">
+                                                    <img src="{{ url('frontend/images/img-testi-2.png') }}" alt="Image User">
                                                 </div>
                                                 <p>
                                                     "Liburan di bromo mantap, pesan tiket serta pembayarannya 
@@ -320,7 +256,7 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-4">
                         <div class="offer-card d-flex flex-column">
-                            <img src="./frontend/images/handshake.png" alt="Handshake" width="120px" height="120px">
+                            <img src="{{ url('frontend/images/handshake.png') }}" alt="Handshake" width="120px" height="120px">
                             <h3>Booking lebih simple</h3>
                             <p>
                                 Pilih tiket yang ingin dijadikan tempat liburan, dan pesan tiket dengan mudah
@@ -330,7 +266,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="offer-card card-active d-flex flex-column">
-                            <img src="./frontend/images/payment.png" alt="Handshake" width="120px" height="120px">
+                            <img src="{{ url('frontend/images/payment.png') }}" alt="Handshake" width="120px" height="120px">
                             <h3>Transaksi mudah</h3>
                             <p>
                                 Transaksi online saat
@@ -340,7 +276,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="offer-card d-flex flex-column">
-                            <img src="./frontend/images/connection.png" alt="Handshake" width="120px" height="120px">
+                            <img src="{{ url('frontend/images/connection.png') }}" alt="Handshake" width="120px" height="120px">
                             <h3>Paling update</h3>
                             <p>
                                 Kami memiliki tiket terbaru
@@ -375,7 +311,7 @@
                     <div class="col-md-4 mb-3" data-aos="slide-up" data-aos-duration="500">
                         <div class="recent-card">
                             <a href="">
-                                <img src="./frontend/images/waterfall.png" alt="Waterfall, Bogor">
+                                <img src="{{ url('frontend/images/waterfall.png') }}" alt="Waterfall, Bogor">
                                 <div class="recent-card-overlay">
                                     <div class="title-tour">Waterfall, Bogor</div>
                                     <div class="date-tour">21 Maret 2021</div>
@@ -386,7 +322,7 @@
                     <div class="col-md-4 mb-3" data-aos="slide-up" data-aos-duration="1000">
                         <div class="recent-card">
                             <a href="">
-                                <img src="./frontend/images/lombok.png" alt="Lombok, Nusa Tenggara">
+                                <img src="{{ url('frontend/images/lombok.png') }}" alt="Lombok, Nusa Tenggara">
                                 <div class="recent-card-overlay">
                                     <div class="title-tour">Lombok, Nusa Tenggara</div>
                                     <div class="date-tour">14 April 2021</div>
@@ -397,7 +333,7 @@
                     <div class="col-md-4 mb-3" data-aos="slide-up" data-aos-duration="1500">
                         <div class="recent-card">
                             <a href="">
-                                <img src="./frontend/images/borobudur.png" alt="Waterfall">
+                                <img src="{{ url('frontend/images/borobudur.png') }}" alt="Waterfall">
                                 <div class="recent-card-overlay">
                                     <div class="title-tour">Borobudur, Jawa Tengah</div>
                                     <div class="date-tour">7 Juni 2021</div>
@@ -410,78 +346,4 @@
         </div>
         <!-- End Recent Tour -->
     </main>
-    
-    <!-- Start Footer -->
-    <footer class="section-footer">
-        <div class="container">
-            <row class="justify-content-center">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-md-3 col-12">
-                            <h5>GET CONNECTED</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="">Jakarta Barat</a></li>
-                                <li><a href="">Indonesia</a></li>
-                                <li><a href="">0812 555 666</a></li>
-                                <li><a href="">support@tour-travel.com</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-12">
-                            <h5>COMPANY</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="">About Us</a></li>
-                                <li><a href="">Careers</a></li>
-                                <li><a href="">Help Center</a></li>
-                                <li><a href="">Support</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-12">
-                            <h5>OTHERS</h5>
-                            <ul class="list-unstyled">
-                                <li><a href="">Refund</a></li>
-                                <li><a href="">Security</a></li>
-                                <li><a href="">Payment</a></li>
-                                <li><a href="">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3 col-12">
-                            <h5>SOCIAL MEDIA</h5>
-                            <div class="social-media">
-                                <img src="./frontend/images/instagram.svg" alt="Instagram" class="mr-2">
-                                <img src="./frontend/images/facebook.svg" alt="Facebook" class="mr-2">
-                                <img src="./frontend/images/twitter.svg" alt="Instagram" class="mr-2">
-                                <img src="./frontend/images/youtube.svg" alt="Youtube" class="mr-2">
-                            </div>
-                            <h5 class="mt-3">GALLERY</h5>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col">
-                                    <div class="tech">
-                                        <img src="./frontend/images/pict.png" alt="Gallery" class="mr-2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </row>
-        </div>
-        <div class="container-fluid">
-            <div class="row justify-content-center align-items-center pt-4">
-                <div class="col-auto text-gray-500 font-weight-light">
-                    <p>&copy; Copyright Raya Tour 2021 By Renaldi • All rights reserved • Made in Jakarta</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
-
-
-    <script src="./frontend/libraries/jquery/jquery-3.4.1.min.js"></script>
-    <script src="./frontend/libraries/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./frontend/libraries/owlcarousel/owl.carousel.min.js"></script>
-    <script src="./frontend/libraries/retina/retina.min.js"></script>
-    <script src="./frontend/libraries/aos/dist/aos.js"></script>
-    <script src="./frontend/scripts/typed.js"></script>
-    <script src="./frontend/scripts/main.js"></script>
-</body>
-</html>
+@endsection
