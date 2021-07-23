@@ -1,0 +1,28 @@
+@use 'main.scss';
+
+.section-success {
+  height: 90vh;
+  padding: 50px 0;
+
+  .content-success {
+    padding: 30px 0 0;
+    h2 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    p {
+      font-weight: 400;
+    }
+  }
+
+  .btn-home-page {
+    background-color: $blue-main;
+    padding: 10px 15px;
+    color: #fff;
+
+    &:hover {
+      background-color: $blue-hover;
+    }
+  }
+}

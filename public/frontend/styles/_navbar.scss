@@ -1,0 +1,38 @@
+.navbar-brand {
+  img {
+    max-height: 40px;
+  }
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: $blue-main;
+
+      &.active {
+        color: $blue-main !important;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.btn-masuk {
+  border: 1px solid $blue-main;
+  color: $blue-main;
+
+  &:hover {
+    background-color: $blue-main;
+    color: #fff;
+  }
+}
+
+.btn-daftar {
+  background-color: $blue-main;
+  color: #fff;
+
+  &:hover {
+    background-color: $blue-hover;
+    color: #fff;
+  }
+}

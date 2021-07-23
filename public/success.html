@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Travel</title>
+    <link rel="stylesheet" href="./frontend/libraries/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./frontend/libraries/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./frontend/libraries/aos/dist/aos.css">
+    <link rel="stylesheet" href="./frontend/libraries/xzoom/xzoom.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./frontend/libraries/gijgo/css/gijgo.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./frontend/styles/main.css">
+</head>
+<body>
+    <!-- Start Navbar -->
+    <div class="container" id="nav"> 
+        <nav class="row navbar navbar-expand-lg navbar-light bg-white d-flex justify-content-center">
+            <a href="#" class="navbar-brand">
+                <img src="./frontend/images/Logo.png" alt="logo RAVEL"/>
+            </a>
+        </nav>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+        <div class="section-success">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="img-success justify-content-center d-flex">
+                            <lottie-player
+                                autoplay
+                                mode="normal"
+                                src="./frontend/images/lottie/success.json"
+                                style="width: 320px"
+                            >
+                            </lottie-player>
+                        </div>
+                        <div class="content-success">
+                            <h2>
+                                Success Payment
+                            </h2>
+                            <p>
+                                We've sent you email for trip instruction
+                                <br>
+                                please check and read it as well
+                            </p>
+                        </div>
+                        <a href="index.html" class="btn btn-home-page px-5">
+                            Home Page
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+
+    <script src="./frontend/libraries/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./frontend/libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./frontend/libraries/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./frontend/libraries/retina/retina.min.js"></script>
+    <script src="./frontend/libraries/aos/dist/aos.js"></script>
+    <script src="./frontend/libraries/xzoom/xzoom.min.js"></script>
+    <script src="./frontend/libraries/gijgo/js/gijgo.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.2.0/dist/lottie-player.js"></script>
+    <script src="./frontend/scripts/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.xzoom, .xzoom-gallery').xzoom({
+                zoomWidth: 100,
+                zoomHeight: 100,
+                title: false,
+                tint: '#135a8d',
+                Xoffset: 15,
+            });
+
+            $('.datepicker').datepicker({
+                uiLibrary: 'bootstrap4',
+                icons: {
+                    rightIcon: '<i class="las la-calendar"></i>'
+                }
+            })
+        });
+    </script>
+</body>
+</html>

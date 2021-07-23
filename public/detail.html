@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Travel</title>
+    <link rel="stylesheet" href="./frontend/libraries/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./frontend/libraries/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./frontend/libraries/aos/dist/aos.css">
+    <link rel="stylesheet" href="./frontend/libraries/xzoom/xzoom.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./frontend/styles/main.css">
+</head>
+<body>
+    <!-- Start Navbar -->
+    <div class="container" id="nav"> 
+        <nav class="row navbar navbar-expand-lg navbar-light bg-white">
+            <a href="#" class="navbar-brand">
+                <img src="./frontend/images/Logo.png" alt="logo RAVEL"/>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+                <span class="navbar-toggler-icon"></span> 
+            </button>
+
+            <div class="collapse navbar-collapse" id="navb">
+                <ul class="navbar-nav ml-auto mr-3 text-center">
+                    <li class="nav-item mx-md-2">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a href="#popular" class="nav-link page-scroll">Tiket Tour</a>
+                    </li>
+                    <li class="nav-item dropdown mx-md-2">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">Service</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Create VISA</a>
+                            <a href="#" class="dropdown-item">Payment</a>
+                            <a href="#" class="dropdown-item">Other Problems</a>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-md-2">
+                        <a href="#testimonialHeading" class="nav-link page-scroll">Testimonial</a>
+                    </li>  
+                </ul>
+
+                <!-- Mobile Button -->
+                <form class="form-inline d-sm-block d-md-none">
+                    <button class="btn btn-block btn-masuk my-2 my-sm-0 ">Masuk</button>
+                </form>
+                <form class="form-inline d-sm-block d-md-none">
+                    <button class="btn btn-block btn-daftar my-2 my-sm-0 ">Daftar</button>
+                </form>
+
+                <!-- Desktop Button -->
+                <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-2">
+                    <button class="btn btn-masuk my-2 my-sm-0 px-4">Masuk</button>
+                </form>
+                <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-2">
+                    <button class="btn btn-daftar my-2 my-sm-0 px-4">Daftar</button>
+                </form>
+
+            </div>
+        </nav>
+    </div>
+    <!-- End Navbar -->
+
+    <main>
+        <!-- Start Card Details -->
+        <section class="section-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col p-md-0">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item align-items-center d-flex"><i class="la la-home"></i><a href=""> Home</a></li>
+                                <li class="breadcrumb-item active align-items-center d-flex"><i class="las la-suitcase"></i><a href=""> Detail</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 pl-lg-0">
+                        <div class="card card-details">
+                            <h2 class="text-uppercase">RAJA AMPAT, PAPUA</h2>
+                            <p class="text-uppercase">
+                                INDONESIA
+                            </p>
+                            <div class="gallery d-md-flex flex-md-row">
+                                <div class="banner xzoom-container">
+                                    <img src="./frontend/images/image-banner.png" alt="Banner" class="xzoom w-100 h-auto" id="xzoom-default" xoriginal="./frontend/images/image-banner.png">
+                                </div>
+                                <div class="xzoom-thumbs thumbnail d-md-flex flex-md-column mr-md-4">
+                                    <a href="./frontend/images/image-banner.png">
+                                        <img src="./frontend/images/image-thumb.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner.png">
+                                    </a>
+                                    <a href="./frontend/images/image-banner-1.png">
+                                        <img src="./frontend/images/image-thumb-1.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner-1.png">
+                                    </a>
+                                    <a href="./frontend/images/image-banner-2.png">
+                                        <img src="./frontend/images/image-thumb-2.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner-2.png">
+                                    </a>
+                                    <a href="./frontend/images/image-banner-3.png">
+                                        <img src="./frontend/images/image-thumb-3.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner-3.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="content-gallery">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h2>
+                                            Tentang Wisata
+                                        </h2>
+                                        <p>
+                                            Terletak di ujung barat laut Semenanjung Kepala Burung di pulau New Guinea,
+                                            di provinsi Papua Barat di Indonesia, Raja Ampat, atau Empat Raja adalah sebuah 
+                                            Kepulauan terdiri dari lebih dari 1.500 pulau kecil, ngarai, dan beting yang mengelilingi 
+                                            empat pulau utama Misool, Salawati, Batanta, dan Waigeo, dan Pulau Kecil Kofiau.
+                                            Kepulauan Raja Ampat mengangkangi Khatulistiwa dan merupakan bagian dari Segitiga 
+                                            Terumbu Karang yang mengandung keanekaragaman hayati laut terkaya di bumi.
+                                        </p>
+                                        <div class="feature row">
+                                            <div class="col-md-4">
+                                                <div class="feature-content d-flex flex-row">
+                                                    <i class="las la-suitcase" style="font-size: 24px; text-align: center; margin-right: 10px;"></i>
+                                                    <p>Water Activities</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-content d-flex flex-row">
+                                                    <i class="las la-language" style="font-size: 24px; text-align: center; margin-right: 10px;"></i>
+                                                    <p>Indonesian / English</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <div class="feature-content d-flex flex-row">
+                                                    <i class="las la-utensils" style="font-size: 24px; text-align: center; margin-right: 10px;"></i>
+                                                    <p>Traditional Food</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- maps -->
+                                        <div class="maps">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <h2>Location Map</h2>
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042457.4824699077!2d129.38375669291239!3d-1.0291010456643883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5c3eaaccb47097%3A0x7851bd844c4cdf44!2sRaja%20Ampat%20Regency!5e0!3m2!1sen!2sid!4v1626837225709!5m2!1sen!2sid" style="border:0; width: 100%; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- maps -->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card card-right">
+                                            <h2>
+                                                Member sudah join
+                                            </h2>
+                                            <div class="members my-2">
+                                                <img src="./frontend/images/img-userjoin-1.png" alt="" class="members-img mr-2">
+                                                <img src="./frontend/images/img-userjoin-2.png" alt="" class="members-img mr-2">
+                                                <img src="./frontend/images/img-userjoin-3.png" alt="" class="members-img mr-2">
+                                                <img src="./frontend/images/img-userjoin-4.png" alt="" class="members-img mr-2">
+                                            </div>
+                                            <hr>
+                                            <h2>Deskripsi Ringkas</h2>
+                                            <table class="deskripsi-ringkas">
+                                                <tr>
+                                                    <th width="50%">Tanggal Berangkat</th>
+                                                    <td width="50%" class="text-right">
+                                                        22 Desember 2021
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="50%">Jumlah Hari</th>
+                                                    <td width="50%" class="text-right">
+                                                        2D 1N
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="50%">Tipe Tour</th>
+                                                    <td width="50%" class="text-right">
+                                                        Open
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="50%">Harga</th>
+                                                    <td width="50%" class="text-right">
+                                                        Rp. 970.000 / Orang
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="join-container">
+                                            <a href="checkout.html" class="btn btn-block btn-join-now py-2">
+                                                Join Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Card Details -->
+
+        <!-- Start Whats Include -->
+        <div class="section-what-include">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h1>What's Include</h1>
+                        <hr width="50" style="border: 2px solid #ff8667; margin-bottom: 50px;">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 col-12 justify-content-center d-flex">
+                        <ul>
+                            <li><i class="la la-check"></i> Penginapan dihotel dengan sarapan pagi</li>
+                            <li><i class="la la-check"></i> Tour dan makan sesuai itinerary</li>
+                            <li><i class="la la-check"></i> Transportasi sesuai jumlah perserta</li>
+                            <li><i class="la la-check"></i> Gratis penggunaan standard masker</li>
+                            <li><i class="la la-check"></i> Tiket masuk objek wisata</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7 col-12 justify-content-center d-flex">
+                        <div class="img-what-include">
+                            <img src="./frontend/images/img-content-what-include.png" alt="Image" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Whats Include -->
+    </main>
+
+    <!-- Start Footer -->
+    <footer class="section-footer">
+        <div class="container">
+            <row class="justify-content-center">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <h5>GET CONNECTED</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="">Jakarta Barat</a></li>
+                                <li><a href="">Indonesia</a></li>
+                                <li><a href="">0812 555 666</a></li>
+                                <li><a href="">support@tour-travel.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <h5>COMPANY</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Careers</a></li>
+                                <li><a href="">Help Center</a></li>
+                                <li><a href="">Support</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <h5>OTHERS</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="">Refund</a></li>
+                                <li><a href="">Security</a></li>
+                                <li><a href="">Payment</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <h5>SOCIAL MEDIA</h5>
+                            <div class="social-media">
+                                <img src="./frontend/images/instagram.svg" alt="Instagram" class="mr-2">
+                                <img src="./frontend/images/facebook.svg" alt="Facebook" class="mr-2">
+                                <img src="./frontend/images/twitter.svg" alt="Instagram" class="mr-2">
+                                <img src="./frontend/images/youtube.svg" alt="Youtube" class="mr-2">
+                            </div>
+                            <h5 class="mt-3">GALLERY</h5>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col">
+                                    <div class="tech">
+                                        <img src="./frontend/images/pict.png" alt="Gallery" class="mr-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </row>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center pt-4">
+                <div class="col-auto text-gray-500 font-weight-light">
+                    <p>&copy; Copyright Raya Tour 2021 By Renaldi • All rights reserved • Made in Jakarta</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    
+
+
+    <script src="./frontend/libraries/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./frontend/libraries/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./frontend/libraries/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./frontend/libraries/retina/retina.min.js"></script>
+    <script src="./frontend/libraries/aos/dist/aos.js"></script>
+    <script src="./frontend/libraries/xzoom/xzoom.min.js"></script>
+    <script src="./frontend/scripts/typed.js"></script>
+    <script src="./frontend/scripts/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.xzoom, .xzoom-gallery').xzoom({
+                zoomWidth: 100,
+                zoomHeight: 100,
+                title: false,
+                tint: '#135a8d',
+                Xoffset: 15,
+            });
+        });
+    </script>
+</body>
+</html>

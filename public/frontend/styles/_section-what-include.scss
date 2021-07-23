@@ -1,0 +1,36 @@
+.section-what-include {
+  padding: 70px 0 70px;
+  position: relative;
+  z-index: 1;
+
+  .banner-what-include {
+    position: absolute;
+    z-index: -1;
+    background-image: url("../images/banner-what-include.png");
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    top: 0;
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+  }
+
+  .img-what-include {
+    width: 400px;
+  }
+}

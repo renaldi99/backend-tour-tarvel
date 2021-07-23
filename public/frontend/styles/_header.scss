@@ -1,0 +1,65 @@
+@use 'main.scss';
+
+header {
+  padding: 220px 0 220px;
+  margin-top: -66px;
+  background-image: url(../images/banner.png);
+  background-size: cover;
+  background-attachment: fixed;
+
+  h1 {
+    font-size: 42px;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-weight: 600;
+
+    span {
+      background: linear-gradient(
+        to right top,
+        #ff5597,
+        #ff6a7d,
+        #ff8667,
+        #ffa459,
+        #ffc157
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .header-button {
+    margin-top: 70px;
+
+    .btn-book-now {
+      font-weight: 600;
+      color: #fff;
+      background-color: $blue-main;
+      border-radius: 30px;
+      margin-right: 20px;
+
+      &:hover {
+        color: #fff;
+        background-color: $blue-hover;
+      }
+    }
+
+    .btn-book-watch {
+      font-weight: 600;
+      color: #fff;
+      background-image: linear-gradient(
+        to right top,
+        #ff5597,
+        #ff6a7d,
+        #ff8667,
+        #ffa459,
+        #ffc157
+      );
+      border-radius: 30px;
+      transition: 0.8;
+
+      &:hover {
+        background-image: linear-gradient($orange-hover);
+      }
+    }
+  }
+}

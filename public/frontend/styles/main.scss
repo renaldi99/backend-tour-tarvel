@@ -1,0 +1,225 @@
+// Colors
+$bg-color: #ecf0f1;
+$dot-color: #34495e;
+$blue-main: #135a8d;
+$blue-hover: #2f8ed2;
+$orange-main: #ff9e53;
+$orange-hover: #f2a66b;
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
+
+body {
+  background: linear-gradient(
+        90deg,
+        $bg-color ($dot-space - $dot-size),
+        transparent 1%
+      )
+      center,
+    linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+    $dot-color;
+  background-size: $dot-space $dot-space;
+  font-family: "Assistant", sans-serif;
+  color: $blue-main;
+}
+
+// -- index.html
+// navbar
+@import "navbar";
+// header
+@import "header";
+// section-title
+@import "section-title";
+// section-tour
+@import "section-tour";
+// section-company
+@import "section-company";
+// section-testimonial
+@import "section-testimonial";
+// section-subscribe
+@import "section-subscribe";
+// section-offer
+@import "section-offer";
+// section-recent
+@import "section-recent";
+// section-footer
+@import "section-footer";
+// -- index.html
+
+// -- detail.html
+// section-details
+@import "section-details";
+// section-what-include
+@import "section-what-include";
+// -- detail.html
+
+// -- checkout.html
+// section-checkout
+@import "section-checkout";
+// section-footer-checkout
+@import "section-footer-checkout";
+// -- checkout.html
+
+// -- success.html
+@import "section-success";
+// -- success.html
+
+// Responsive mobile
+@media (max-width: 575px) {
+  .section-tour {
+    .section-tour-content {
+      .card-tour {
+        margin: 10px;
+      }
+    }
+  }
+
+  .section-company {
+    img {
+      margin-bottom: 50px;
+    }
+  }
+
+  .section-subscribe {
+    .mail-form {
+      .subscribe-input {
+        margin-right: 0px;
+        margin-bottom: 15px;
+      }
+
+      .subscribe-btn {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .section-offer-card {
+    .offer-card {
+      margin-bottom: 15px;
+    }
+  }
+
+  .section-recent-tour {
+    .recent-card {
+      margin-bottom: 15px;
+    }
+  }
+
+  .section-details {
+    .card-details {
+      .gallery {
+        .banner {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .thumbnail {
+          overflow: auto;
+          margin-top: 10px;
+
+          a {
+            margin-left: 5px;
+            margin-right: 5px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .content-gallery {
+        .maps {
+          padding-bottom: 15px;
+          border-bottom: 1px solid #ebeaea;
+        }
+
+        .card-right {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Responsive device 575px -  767px
+@media (min-width: 575px) and (max-width: 767px) {
+  .section-subscribe {
+    .mail-form {
+      .subscribe-input {
+        margin-right: 0px;
+        margin-bottom: 15px;
+      }
+
+      .subscribe-btn {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .section-offer-card {
+    .offer-card {
+      margin-bottom: 15px;
+    }
+  }
+
+  .section-recent-tour {
+    .recent-card {
+      margin-bottom: 15px;
+    }
+  }
+
+  .section-recent-tour {
+    .recent-card {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .section-details {
+    .card-details {
+      .gallery {
+        .banner {
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .thumbnail {
+          overflow: auto;
+          margin-top: 10px;
+
+          a {
+            margin-left: 5px;
+            margin-right: 5px;
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .content-gallery {
+        .card-right {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .content-gallery {
+    .feature {
+      .feature-content {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

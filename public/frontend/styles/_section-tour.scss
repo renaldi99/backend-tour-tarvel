@@ -1,0 +1,60 @@
+.section-tour {
+  .section-tour-content {
+    .card-tour {
+      overflow: hidden;
+      border-radius: 10px;
+      font-weight: 600;
+      background-color: #fff;
+      transition-property: background-color, border-color, color, fill, stroke,
+        opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+
+      .tour-image {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 30px;
+        min-height: 324px;
+        background-color: #bbb9b9;
+        color: #fff;
+        background-size: cover;
+
+        .tour-country {
+          font-size: 14px;
+          color: #fff;
+        }
+
+        .tour-location {
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+
+      .tour-body {
+        padding: 20px;
+
+        .tour-title {
+          font-size: 18px;
+          color: #000;
+          margin-bottom: 17px;
+        }
+
+        .tour-text {
+          font-size: 12px;
+          color: #000;
+        }
+
+        .tour-price {
+          font-size: 18px;
+        }
+      }
+
+      &:hover {
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+    }
+  }
+}
