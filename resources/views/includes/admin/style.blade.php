@@ -1,3 +1,4 @@
+<link rel="shortcut icon" type="image/x-icon" href="{{ url('frontend/images/') }}">
 <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet" href="{{ url('backend/bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 <!-- Font Awesome -->
