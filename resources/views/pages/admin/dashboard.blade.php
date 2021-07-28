@@ -23,7 +23,7 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>150</h3>
+              <h3>{{ $tour_package }}</h3>
 
               <p>Tiket Tour</p>
             </div>
@@ -38,7 +38,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>2</sup></h3>
+              <h3>{{ $transaction }}</sup></h3>
 
               <p>Transaksi</p>
             </div>
@@ -53,7 +53,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>4</h3>
+              <h3>{{ $transaction_pending }}</h3>
 
               <p>Pending</p>
             </div>
@@ -68,7 +68,7 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>5</h3>
+              <h3>{{ $transaction_success }}</h3>
 
               <p>Sukses</p>
             </div>

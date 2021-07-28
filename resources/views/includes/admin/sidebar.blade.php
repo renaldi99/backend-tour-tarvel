@@ -8,7 +8,7 @@
           <img src="{{ url('backend/dist/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>{{ Auth::user()->name }}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -27,28 +27,28 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{{ route('dashboard') }}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
             </span>
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{{ route('tour-package.index') }}">
             <i class="fa fa-ticket"></i> <span>Tiket Tour</span>
             <span class="pull-right-container">
             </span>
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{{ route('image.index') }}">
             <i class="fa fa-image"></i> <span>Images Tour</span>
             <span class="pull-right-container">
             </span>
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{{ route('transaction.index') }}">
             <i class="fa fa-dollar"></i> <span>Transaksi</span>
             <span class="pull-right-container">
             </span>

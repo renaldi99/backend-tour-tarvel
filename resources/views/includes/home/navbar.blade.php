@@ -31,18 +31,18 @@
             @guest
                 <!-- Mobile Button -->
                 <form class="form-inline d-sm-block d-md-none">
-                    <button class="btn btn-block btn-masuk my-2 my-sm-0" type="button" onclick="event.PreventDefault(); location.href='{{ url('login') }}'">Masuk</button>
+                    <button class="btn btn-block btn-masuk my-2 my-sm-0" type="button" onclick="event.preventDefault(); location.href='{{ url('login') }}'">Masuk</button>
                 </form>
                 <form class="form-inline d-sm-block d-md-none">
-                    <button class="btn btn-block btn-daftar my-2 my-sm-0 ">Daftar</button>
+                    <button class="btn btn-block btn-daftar my-2 my-sm-0" onclick="event.preventDefault(); location.href='{{ url('register') }}'">Daftar</button>
                 </form>
 
                 <!-- Desktop Button -->
                 <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-2">
-                    <button class="btn btn-masuk my-2 my-sm-0 px-4" type="button" onclick="event.PreventDefault(); location.href='{{ url('login') }}'">Masuk</button>
+                    <button class="btn btn-masuk my-2 my-sm-0 px-4" type="button" onclick="event.preventDefault(); location.href='{{ url('login') }}'">Masuk</button>
                 </form>
                 <form class="form-inline my-2 my-lg-0 d-none d-md-block mx-2">
-                    <button class="btn btn-daftar my-2 my-sm-0 px-4">Daftar</button>
+                    <button class="btn btn-daftar my-2 my-sm-0 px-4" onclick="event.preventDefault(); location.href='{{ url('register') }}'">Daftar</button>
                 </form>
             @endguest
 

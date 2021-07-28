@@ -26,5 +26,9 @@ Route::prefix('admin')
     ->middleware('auth', 'admin')
     ->group(function() {
         route::get('/', 'DashboardController@index')->name('dashboard');
+
+        route::resource('tour-package', 'TourPackageController');
+        route::resource('image', 'ImageController');
+        route::resource('transaction', 'TransactionController');
     });
 Auth::routes(['verify' => true]);

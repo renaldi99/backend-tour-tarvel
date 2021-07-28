@@ -17,9 +17,9 @@ class CreateTransactionDetailsTable extends Migration
             $table->id();
             $table->integer('transactions_id');
             $table->string('username');
-            $table->string('nasionality');
+            $table->string('nationality');
             $table->boolean('is_visa');
-            $table->date('doe_pasport');
+            $table->date('doe_passport')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

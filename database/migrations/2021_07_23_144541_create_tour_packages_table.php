@@ -18,6 +18,7 @@ class CreateTourPackagesTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('location');
+            $table->string('short_content');
             $table->longText('description');
             $table->string('event');
             $table->string('language');

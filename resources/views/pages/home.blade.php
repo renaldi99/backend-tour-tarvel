@@ -11,7 +11,7 @@
             Yang kamu mau, <span class="type-animate"></span> 
         </h1>
         <div class="header-button">
-            <a href="" class="btn btn-book-now px-4">Book Now</a>
+            <a href="#tiketTour" class="btn btn-book-now px-4">Book Now</a>
             <a href="" class="btn btn-book-watch px-4">Watch Video</a>
         </div>
     </header>
@@ -40,48 +40,22 @@
         <section class="section-tour" id="tiketTour">
             <div class="container">
                 <div class="section-tour-content row justify-content-center">
-                    <div class="col-sm-13 col-md-4" data-aos="zoom-in-up" data-aos-duration="500">
+                    @foreach ($items as $item)
+                    <div class="col-sm-12 col-md-4" data-aos="zoom-in-up" data-aos-duration="500">
                         <div class="card-tour d-flex flex-column position-relative">
-                            <div class="tour-image text-center d-flex flex-column"  style="background-image: url('./frontend/images/wisata.png');">
-                                <div class="tour-country text-uppercase">INDONESIA</div>
-                                <div class="tour-location text-uppercase">Pulau Bawah, Riau</div>
+                            <div class="tour-image text-center d-flex flex-column"  style="background-image: url('{{ $item->images->count() ? Storage::url($item->images->first()->image) : '' }}');">
+                                <div class="tour-country text-uppercase">{{ $item->location }}</div>
+                                <div class="tour-location text-uppercase">{{ $item->title }}</div>
                             </div>
                             <div class="tour-body d-flex flex-column">
-                                <div class="tour-title">Explore Riau Islands</div>
+                                <div class="tour-title">{{ $item->short_content }}</div>
                                 <div class="tour-text">Mulai dari</div>
-                                <div class="tour-price">IDR 770,000</div>
+                                <div class="tour-price">{{ $item->price }}</div>
                             </div>
                             <a href="{{ route('detail') }}" class="stretched-link"></a>
                         </div>
                     </div>
-                    <div class="col-sm-13 col-md-4" data-aos="zoom-in-up" data-aos-duration="1000">
-                        <div class="card-tour d-flex flex-column position-relative">
-                            <div class="tour-image text-center d-flex flex-column"  style="background-image: url('./frontend/images/wisata-2.png');">
-                                <div class="tour-country text-uppercase">INDONESIA</div>
-                                <div class="tour-location text-uppercase">Gunung Bromo, Malang</div>
-                            </div>
-                            <div class="tour-body d-flex flex-column">
-                                <div class="tour-title">Bromo Midnight Golder Sunrise</div>
-                                <div class="tour-text">Mulai dari</div>
-                                <div class="tour-price">IDR 350,000</div>
-                            </div>
-                            <a href="{{ route('detail') }}" class="stretched-link"></a>
-                        </div>
-                    </div>
-                    <div class="col-sm-13 col-md-4" data-aos="zoom-in-up" data-aos-duration="1500">
-                        <div class="card-tour d-flex flex-column position-relative">
-                            <div class="tour-image text-center d-flex flex-column"  style="background-image: url('./frontend/images/wisata-3.png');">
-                                <div class="tour-country text-uppercase">INDONESIA</div>
-                                <div class="tour-location text-uppercase">Raja Ampat, Papua</div>
-                            </div>
-                            <div class="tour-body d-flex flex-column">
-                                <div class="tour-title">Escape to a Magic Place</div>
-                                <div class="tour-text">Mulai dari</div>
-                                <div class="tour-price">IDR 470,000</div>
-                            </div>
-                            <a href="{{ route('detail') }}" class="stretched-link"></a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
