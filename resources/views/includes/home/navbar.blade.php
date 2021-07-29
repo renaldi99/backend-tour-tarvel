@@ -48,7 +48,7 @@
 
             @auth
                 <!-- Mobile Button -->
-                <form class="form-inline d-sm-block d-md-none text-center">
+                <div class="form-inline d-sm-block d-md-none text-center">
                     <a href="" class="my-2 my-sm-0 d-block w-100 nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="dropdown-item"></i>User Account</a></li>
@@ -59,7 +59,7 @@
                             <button class="dropdown-item" type="submit">Logout</button>
                         </form>
                     </ul>
-                </form>
+                </div>
 
                 <!-- Desktop Button -->
                 <div class="form-inline my-2 my-lg-0 d-none d-md-block dropdown">

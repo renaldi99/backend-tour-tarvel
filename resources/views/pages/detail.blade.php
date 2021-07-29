@@ -12,7 +12,7 @@
                     <nav>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item align-items-center d-flex"><i class="la la-home"></i><a href="{{ route('home') }}"> Home</a></li>
-                            <li class="breadcrumb-item active align-items-center d-flex"><i class="las la-suitcase"></i><a href="{{ route('detail') }}"> Detail</a></li>
+                            <li class="breadcrumb-item active align-items-center d-flex"><i class="las la-suitcase"></i><a href="{{ route('detail', $item->slug) }}"> Detail</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -20,29 +20,24 @@
             <div class="row">
                 <div class="col-md-12 pl-lg-0">
                     <div class="card card-details">
-                        <h2 class="text-uppercase">RAJA AMPAT, PAPUA</h2>
+                        <h2 class="text-uppercase">{{ $item->title }}</h2>
                         <p class="text-uppercase">
-                            INDONESIA
+                            {{ $item->location }}
                         </p>
-                        <div class="gallery d-md-flex flex-md-row">
+                        @if ($item->images->count())
+                        <div class="gallery d-md-flex flex-md-row mb-md-5">
                             <div class="banner xzoom-container">
-                                <img src="./frontend/images/image-banner.png" alt="Banner" class="xzoom w-100 h-auto" id="xzoom-default" xoriginal="./frontend/images/image-banner.png">
+                                <img src="{{ Storage::url($item->images->first()->image) }}" alt="Banner" class="xzoom w-100 h-auto" id="xzoom-default" xoriginal="{{ Storage::url($item->images->first()->image) }}">
                             </div>
-                            <div class="xzoom-thumbs thumbnail d-md-flex flex-md-column mr-md-4">
-                                <a href="./frontend/images/image-banner.png">
-                                    <img src="./frontend/images/image-thumb.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner.png">
+                            <div class="xzoom-thumbs thumbnail d-md-flex flex-md-column mr-md-4 pt-md-5">
+                                @foreach ($item->images as $image)
+                                <a href="{{ Storage::url($image->image) }}">
+                                    <img src="{{ Storage::url($image->image) }}" class="xzoom-gallery ml-0" width="128" xpreview="{{ Storage::url($image->image) }}">
                                 </a>
-                                <a href="./frontend/images/image-banner-1.png">
-                                    <img src="./frontend/images/image-thumb-1.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner-1.png">
-                                </a>
-                                <a href="./frontend/images/image-banner-2.png">
-                                    <img src="./frontend/images/image-thumb-2.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner-2.png">
-                                </a>
-                                <a href="./frontend/images/image-banner-3.png">
-                                    <img src="./frontend/images/image-thumb-3.png" class="xzoom-gallery ml-0" width="128" xpreview="./frontend/images/image-banner-3.png">
-                                </a>
+                                @endforeach
                             </div>
                         </div>
+                        @endif
                         <div class="content-gallery">
                             <div class="row">
                                 <div class="col-md-8">
@@ -50,30 +45,25 @@
                                         Tentang Wisata
                                     </h2>
                                     <p>
-                                        Terletak di ujung barat laut Semenanjung Kepala Burung di pulau New Guinea,
-                                        di provinsi Papua Barat di Indonesia, Raja Ampat, atau Empat Raja adalah sebuah 
-                                        Kepulauan terdiri dari lebih dari 1.500 pulau kecil, ngarai, dan beting yang mengelilingi 
-                                        empat pulau utama Misool, Salawati, Batanta, dan Waigeo, dan Pulau Kecil Kofiau.
-                                        Kepulauan Raja Ampat mengangkangi Khatulistiwa dan merupakan bagian dari Segitiga 
-                                        Terumbu Karang yang mengandung keanekaragaman hayati laut terkaya di bumi.
+                                       {!! $item->description !!}
                                     </p>
                                     <div class="feature row">
                                         <div class="col-md-4">
                                             <div class="feature-content d-flex flex-row">
                                                 <i class="las la-suitcase" style="font-size: 24px; text-align: center; margin-right: 10px;"></i>
-                                                <p>Water Activities</p>
+                                                <p>{{ $item->event }}</p>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="feature-content d-flex flex-row">
                                                 <i class="las la-language" style="font-size: 24px; text-align: center; margin-right: 10px;"></i>
-                                                <p>Indonesian / English</p>
+                                                <p>{{ $item->language }}</p>
                                             </div>
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <div class="feature-content d-flex flex-row">
                                                 <i class="las la-utensils" style="font-size: 24px; text-align: center; margin-right: 10px;"></i>
-                                                <p>Traditional Food</p>
+                                                <p>{{ $item->food }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -82,7 +72,7 @@
                                         <div class="row">
                                             <div class="col">
                                                 <h2>Location Map</h2>
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042457.4824699077!2d129.38375669291239!3d-1.0291010456643883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5c3eaaccb47097%3A0x7851bd844c4cdf44!2sRaja%20Ampat%20Regency!5e0!3m2!1sen!2sid!4v1626837225709!5m2!1sen!2sid" style="border:0; width: 100%; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+                                                <iframe src="{{ $item->map == '' ? 'Empty set' : $item->map }}" style="border:0; width: 100%; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -105,33 +95,42 @@
                                             <tr>
                                                 <th width="50%">Tanggal Berangkat</th>
                                                 <td width="50%" class="text-right">
-                                                    22 Desember 2021
+                                                    {{ \Carbon\Carbon::create($item->departure)->format('F n, Y') }}
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th width="50%">Jumlah Hari</th>
                                                 <td width="50%" class="text-right">
-                                                    2D 1N
+                                                    {{ $item->duration }}
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th width="50%">Tipe Tour</th>
                                                 <td width="50%" class="text-right">
-                                                    Open
+                                                    {{ $item->type }}
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th width="50%">Harga</th>
                                                 <td width="50%" class="text-right">
-                                                    Rp. 970.000 / Orang
+                                                    Rp. {{ $item->price }} / Orang
                                                 </td>
                                             </tr>
                                         </table>
                                     </div>
                                     <div class="join-container">
-                                        <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now py-2">
-                                            Join Now
-                                        </a>
+                                        @auth
+                                            <form action="" method="POST">
+                                                <button class="btn btn-block btn-join-now py-2" type="submit">
+                                                    Book Now
+                                                </button>
+                                            </form>
+                                        @endauth
+                                        @guest
+                                            <a href="{{ route('login') }}" class="btn btn-block btn-join-now py-2">
+                                                Login or Register to Join
+                                            </a>
+                                        @endguest
                                     </div>
                                 </div>
                             </div>

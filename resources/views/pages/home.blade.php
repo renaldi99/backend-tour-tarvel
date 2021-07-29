@@ -50,9 +50,9 @@
                             <div class="tour-body d-flex flex-column">
                                 <div class="tour-title">{{ $item->short_content }}</div>
                                 <div class="tour-text">Mulai dari</div>
-                                <div class="tour-price">{{ $item->price }}</div>
+                                <div class="tour-price">IDR {{ $item->price }}</div>
                             </div>
-                            <a href="{{ route('detail') }}" class="stretched-link"></a>
+                            <a href="{{ route('detail', $item->slug) }}" class="stretched-link"></a>
                         </div>
                     </div>
                     @endforeach
