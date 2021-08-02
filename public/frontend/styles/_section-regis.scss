@@ -1,0 +1,45 @@
+.regis-container {
+    @media (min-width: 992px) {
+        background: url("../images/right.png") no-repeat;
+        width: 100vw;
+        height: 100vh;
+        background-position: right;
+    }
+
+    @media (max-width: 425px) {
+        .page-regis .page-mobile h1 {
+            color: #072234;
+            font-size: 30px;
+        }
+
+        .page-regis .section-left h1 {
+            display: none;
+        }
+    }
+}
+
+.page-regis {
+    height: 100vh;
+
+    .btn-login {
+        background-color: #ff9e53;
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .section-left {
+        h1 {
+            font-family: "Playfair Display";
+            font-weight: bold;
+            font-size: 50px;
+            color: #035;
+        }
+    }
+
+    .link-login {
+        margin-bottom: -30px;
+    }
+}

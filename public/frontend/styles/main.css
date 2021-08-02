@@ -855,6 +855,95 @@ header .header-button .btn-book-watch:hover {
   background-color: #2f8ed2;
 }
 
+@media (min-width: 992px) {
+  .section-login {
+    background: url("../images/login_left.png") no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-login .page-login .page-mobile h1 {
+    color: #072234;
+    font-size: 30px;
+  }
+  .section-login .page-login .section-right h1 {
+    display: none;
+  }
+}
+
+.section-login .page-login {
+  height: 100vh;
+}
+
+.section-login .page-login .btn-login {
+  background-color: #ff9e53;
+  color: #fff;
+}
+
+.section-login .page-login .btn-login:hover {
+  color: #fff;
+}
+
+.section-login .page-login .section-left .forgot-password {
+  margin-right: -60px;
+}
+
+.section-login .page-login .section-right h1 {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 50px;
+  color: #035;
+}
+
+.section-login .page-login .link-register {
+  margin-bottom: -30px;
+}
+
+@media (min-width: 992px) {
+  .regis-container {
+    background: url("../images/right.png") no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-position: right;
+  }
+}
+
+@media (max-width: 425px) {
+  .regis-container .page-regis .page-mobile h1 {
+    color: #072234;
+    font-size: 30px;
+  }
+  .regis-container .page-regis .section-left h1 {
+    display: none;
+  }
+}
+
+.page-regis {
+  height: 100vh;
+}
+
+.page-regis .btn-login {
+  background-color: #ff9e53;
+  color: #fff;
+}
+
+.page-regis .btn-login:hover {
+  color: #fff;
+}
+
+.page-regis .section-left h1 {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 50px;
+  color: #035;
+}
+
+.page-regis .link-login {
+  margin-bottom: -30px;
+}
+
 @media (max-width: 575px) {
   .section-tour .section-tour-content .card-tour {
     margin: 10px;
