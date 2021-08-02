@@ -9,13 +9,7 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="img-success justify-content-center d-flex">
-                        <lottie-player
-                            autoplay
-                            mode="normal"
-                            src="{{ url('frontend/images/lottie/success.json') }}"
-                            style="width: 320px"
-                        >
-                        </lottie-player>
+                        <img src="{{ url('frontend/images/undraw_cancel_u1it.svg') }}" alt="" width="320px">
                     </div>
                     <div class="content-success">
                         <h2>
